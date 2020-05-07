@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+  <body>
+    <h1>Admin</h1>
+
+    <form action="/user/models" method="POST">
+       Email: <input name="email" type="text" /><br />
+       Senha: <input name="senha" type="text" /><br />
+      <input type="submit" value="login" />
+
+    </form>
+    
+  <div id="result"></div>
+
+  <script>
+  // Check browser support
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
+  </script>
+  </body>
+</html>
